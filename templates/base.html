@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EspAntenna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body style="height:100%;" class="bg-circle">
+    <div class="bg-navbar col-12 d-flex p-1 row">
+        <div class="bg-circle rounded-circle pt-2 ms-4 col-1" style="width: 5%">
+            <img src="{{url_for('static', filename='logo.png')}}" style="width:100%" class="">
+        </div>
+        <div class="my-auto ps-3 col-2"><p style="font-family: 'Montserrat';font-size: 30px;font-width: bold;color: white;">ESP-Antenna</p></div>
+        <div class="d-flex col-5 ms-auto my-auto">
+            <a class="ms-5 text" href="#">Поддержка</a>
+            <a class="ms-5 text" href="#">О нас</a>
+            <a class="ms-5 text" href="registration">Регистрация/вход</a>
+        </div>
+    </div>
+    <div class="bg-circle col-12">
+        {% if umessage %}
+        <div class="alert alert-danger">
+            <center>{{umessage}}</center>
+        </div>
+        {% endif %}
+        <div class="justify-content-center row h-100 align-items-center mt-5">
+            <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <form method="post" action="/index">
+                    <div class="form-group"><input type="email" name="email" id="email" class="form-control form-control-lg col-3" placeholder="Введите почту"><br></div>
+                    <div class="form-group"><input type="password" name="pas" id="pas" class="form-control form-control-lg col-3" placeholder="Введите пароль"><br></div>
+                    <div class="form-group"><input type="submit" class="btn btn-dark" value="Войти"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

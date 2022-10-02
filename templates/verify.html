@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EspAntenna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <div class="bg-navbar col-12 d-flex p-1">
+        <div class="bg-circle rounded-circle pt-2 ms-4" style="width: 5%">
+            <img src="{{url_for('static', filename='logo.png')}}" style="width:100%" class="">
+        </div>
+        <div class="my-auto ps-3 col-2"><p style="font-family: 'Montserrat';font-size: 30px;font-width: bold;color: white;">ESP-Antenna</p></div>
+        <div class="d-flex col-5 ms-auto my-auto">
+            <a class="ms-5 text" href="#">Поддержка</a>
+            <a class="ms-5 text" href="#">О нас</a>
+            <a class="ms-5 text" href="registration">Регистрация/вход</a>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
+				<h2 class="text-center"> We sent you a mail </h2>
+				<h2 class="text-center text-muted" > Please verify your email to continue </h2>
+        </div>
+    </div>
+</body>
+</html>
